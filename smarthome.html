@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h2> Welcome to Smart Home! </h2>
+    <div class="main">
+        <div class="manage">
+            <div>
+                <label for="elements">Add the element: </label>
+                <select name="elements" id="elements">
+                    <option value="lamp">Lamp</option>
+                    <option value="tv">TV</option>
+                    <option value="conditioner">Conditioner</option>
+                    <option value="signaling">Signaling</option>
+                    <option value="fan">Fan</option>
+                </select>
+                <br>
+                <label for="rooms">into the room: </label>
+                <select name="rooms" id="rooms">
+                    <option value="bedroom">Bedroom</option>
+                    <option value="living-room">Living room</option>
+                    <option value="corridor">Corridor</option>
+                    <option value="bathroom">Bathroom</option>
+                    <option value="kitchen">Kitchen</option>
+                </select>
+                <button class="btn add">Add</button>
+            </div>
+            <div id="roomsContent">
+                <div id="living-room">
+                    <h3>Living room</h3>
+                    <div id="living-roomContent"></div>
+                </div>
+                <div id="bedroom">
+                    <h3>Bedroom</h3>
+                    <div id="bedroomContent"></div>
+
+                </div>
+                <div id="corridor">
+                    <h3>Corridor</h3>
+                    <div id="corridorContent"></div>
+
+                </div>
+                <div id="bathroom">
+                    <h3>Bathroom</h3>
+                    <div id="bathroomContent"></div>
+
+                </div>
+                <div id="kitchen">
+                    <h3>Kitchen</h3>
+                    <div id="kitchenContent"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="house" id="house">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
