@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Maitree&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+}
+h2 {
+    font-family: 'Alegreya Sans', sans-serif;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+}
+h3 {
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    /* font-family: 'Maitree', serif; */
+}
+.main {
+    margin: 30px 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*===================== Managing =====================*/
+
+.manage {
+    /* display: block; */
+}
+
+select {
+    margin: 0 0 8px 10px;
+}
+#rooms {
+    margin-left: 30px;
+}
+.btn {
+    background-color: #CCCCCC;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.add {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 16px;
+    display: block;
+    padding: 2px 15px;
+    margin: 10px auto 30px;
+}
+#roomsContent div {
+    margin-bottom: 15px ;
+}
+#roomsContent div div {
+    margin: 8px 0 0 10px;
+}
+.prev {
+    margin: 0  3px 0 10px;
+}
+.channels {
+    margin: 0 10px;
+}
+.delete {
+    margin-left: 20px;
+    padding: 1px 10px;
+}
+
+
+/*===================== House =====================*/
+
+.house {
+    width: 700px;
+    height: 550px;
+    outline: solid 2px #333333;
+    display: flex;
+    position: relative;
+}
+.room {
+    width: 300px;
+    height: 250px;
+    outline: solid 1px #474747;
+    outline-offset: -1px;
+    position: absolute;
+
+}
+.furniture {
+    position: absolute;
+    /* filter: drop-shadow(0px 15px 12px rgb(234, 255, 0)); */
+}
+.bedroom {
+    height: 250px;
+}
+
+.living-room {
+    height: 300px;
+}
+.corridor {
+    height: 550px;
+    width: 100px;
+}
+
+.bathroom {
+    height: 275px;
+}
+
+.kitchen {
+    height: 275px;
+}
+
+#bedroomHeader, #living-roomHeader {
+    position: absolute;
+    left: -60px;
+    top: 30px;
+    transform: rotate(-90deg);
+}
+#living-roomHeader {
+    top: 290px;
+    left: -67px;
+}
+#bathroomHeader, #kitchenHeader {
+    position: absolute;
+    right: -60px;
+    top: 30px;
+    transform: rotate(90deg);
+}
+#kitchenHeader {
+    right: -50px;
+    top: 300px;
+}
+#corridorHeader {
+    position: absolute;
+    top: 560px;
+    left: 320px;
+}
+
+/*===================== Rotating =====================*/
+
+.rotate{
+    -moz-border-radius: 50px/50px;
+    -webkit-border-radius: 50px 50px;
+    -webkit-animation: rotation 1s linear infinite;
+    -moz-animation: rotation 1s linear infinite;
+    -ms-animation: rotation 1s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes rotation {
+    0%   { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); }
+}
+@-ms-keyframes rotation {
+    0%   { -ms-transform: rotate(0deg); }
+    100% { -ms-transform: rotate(360deg); }
+}
+
+/*===================== Slider =====================*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    margin-bottom: -4px;
+    margin-left: 10px;
+  }
+  
+.switch input {display:none;}
+  
+.slider {
+    border-radius: 34px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+/*===================== Range =====================*/
+
+input[type=range] {
+    height: 10px;
+    width: 80px;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    border-radius: 50px;
+    background: #CCCCCC; 
+    outline: none; 
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    background: #2196F3;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 17px;
+    height: 17px;
+    background: #2196F3;
+    cursor: pointer;
+}
